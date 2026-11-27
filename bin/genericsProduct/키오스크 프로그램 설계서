@@ -1,0 +1,19 @@
+Generics 키오스크 프로그램
+
+class
+Product(Generic)
+ - 멤버변수 : Key : menu, Value : price
+Order extends Product
+ - 멤버변수 : (menu, price), count, total
+  
+ProductController
+ - 멤버변수 : 메뉴를 저장하는 리스트. 주문을 저장하는 리스트
+ - 메서드
+ 	- 기본 메뉴 생성자에서 추가
+ 1. 메뉴 추가
+ 2. 메뉴 출력
+ 3. 주문
+ 4. 주문내역 출력(영수증 출력)
+
+ProductMain
+ 1.메뉴 추가 2.메뉴 보기 3.제품 주문 4.주문내역 보기 5종료  

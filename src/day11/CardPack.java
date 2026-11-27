@@ -1,5 +1,7 @@
 package day11;
 
+import java.util.Arrays;
+
 public class CardPack {
 //	총 52장의 카드 객체를 배열로 저장하는 팩 하나 만들기
 //	멤버변수 -> 52장의 카객체를 담을 수 있는 배열, 번지
@@ -22,20 +24,25 @@ public class CardPack {
 	}
 	public void mix() {
 		for(int i=0; i<pack.length;i++) {
-			int rand = (int)(Math.random()*52);
+			int rand = (int)(Math.random()*pack.length);
 			Card tmp=pack[rand];
 			pack[rand]=pack[i];
 			pack[i]=tmp;
 		}
 	}
 	public Card pick() {
+		if(index>=52) return null;
 		return pack[index++];
 	}
 	public Card[] getPack() {
 		return pack;
 	}
-	public void setPack(Card[] pack) {
-		this.pack = pack;
+	public void re() {
+		index=0;
+	}
+	@Override
+	public String toString() {
+		return "[" + Arrays.toString(pack) + "], index=" + index;
 	}
 	
 }

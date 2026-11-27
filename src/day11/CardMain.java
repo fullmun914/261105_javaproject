@@ -29,7 +29,6 @@ public class CardMain {
 //			}
 //			System.out.println();
 //		}
-		
 		System.out.println("딜러가 카드를 섞고 있습니다.");
 		cPack.mix();
 		System.out.println("딜러가 카드를 나누고 있습니다");
@@ -44,6 +43,7 @@ public class CardMain {
 		}
 		
 		System.out.println("카드를 회수합니다.");
+		cPack.re();
 	}
 
 }
